@@ -12,14 +12,27 @@ public class User {
         this.name = name;
         this.surname = surname;
         this.pesel = pesel;
-        this.nickname=nickNameGenerator(name, surname);
-        this.balance=100;
+        this.nickname = nickNameGenerator(name, surname);
+        this.balance = 100;
 
 
     }
-    public String nickNameGenerator(String name, String surname){
-        return (name.substring(0,2)+surname.substring(0,2));
 
+    public String nickNameGenerator(String name, String surname) {
+        return (name.substring(0, 2) + surname.substring(0, 2));
+
+    }
+
+    public void userDetails() {
+        System.out.println("Imie: " + name + "Nazwisko: " + surname + "Numer konta" + accountNumber + "Pesel: " + pesel + "Saldo: " + balance);
+    }
+
+    public double deposit(double money) {
+        return balance = balance + money;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 
 }

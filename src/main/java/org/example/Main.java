@@ -1,6 +1,5 @@
 package org.example;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -22,9 +21,13 @@ public class Main {
         switch (selectNumer){
             case 1:
                 System.out.println("Informacja o koncie");
+                user1.userDetails();
                 break;
             case 2:
-                System.out.println("Wplata pieniedzy");
+                System.out.println("Ile chcesz wplacic pieniedzy?");
+                double moneyToDeposit= scanner.nextDouble();
+                user1.deposit(moneyToDeposit);
+                System.out.println("Saldo twojego konta wynosi: "+user1.getBalance());
                 break;
             case 3:
                 System.out.println("Wyplata pieniedzy ");
