@@ -35,4 +35,15 @@ public class User {
         return balance;
     }
 
+    public double withdraw(double money) {
+
+        if (money > balance) {
+            System.out.println("Nie wystarczająca ilość pieniedzy na koncie");
+        } else {
+            balance = balance - money;
+        }
+
+        return balance;
+    }
+
 }
