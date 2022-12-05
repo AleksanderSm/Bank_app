@@ -14,6 +14,26 @@ public class Main {
         System.out.println("Wprowadz pesel");
         int pesel=scanner.nextInt();
 
-        System.out.println("Menu\n 1.Informacje o koncie\n 2.Wplata pieniedzy \n 3.Wyplata pieniedzy \n4.Wyjscie  ");
+        User user1=new User(name, surname, pesel);
+        System.out.println("Menu\n 1.Informacje o koncie\n 2.Wplata pieniedzy\n 3.Wyplata pieniedzy\n 4.Wyjscie  ");
+        System.out.println("Ktora opcje wybierasz?");
+        int selectNumer = scanner.nextInt();
+
+        switch (selectNumer){
+            case 1:
+                System.out.println("Informacja o koncie");
+                break;
+            case 2:
+                System.out.println("Wplata pieniedzy");
+                break;
+            case 3:
+                System.out.println("Wyplata pieniedzy ");
+                break;
+            case 4:
+                System.out.println("Wyjscie");
+                break;
+
+        }
+
     }
 }
